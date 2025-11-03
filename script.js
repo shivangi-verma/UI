@@ -34,7 +34,7 @@ animate(
 //   //   css properties
 //   {
 //     opacity: 1,
-//     y: [50, 0],
+//     y: [50, 0], 
 //   },
 //   //   animation params
 //   {
