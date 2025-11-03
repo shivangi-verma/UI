@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <parent-container class="grid grid-cols-4 gap-4">
+      <!-- left side -->
+      <div class="p-4 col-span-3 grid grid-cols-2 gap-6">
+        <!-- navbar + profile -->
+        <nav class="nav col-span-2 flex gap-6 w-full justify-between">
+          <ul class="links items-center flex gap-6 justify-between">
+            <li class="flex justify-center">
+              <i class="flower ph ph-flower-lotus text-4xl"></i>
+            </li>
+            <li class="">Dashboard</li>
+            <li class="">Task</li>
+            <li class="">Candidate</li>
+            <li class="">Performance</li>
+            <li class="">Schedule</li>
+            <li class="">Notes</li>
+            <li class=""></li>
+            <li class=""></li>
+          </ul>
+          <div class="profile flex gap-2">
+            <i class="text-3xl ph ph-chat-circle-text"></i>
+            <i class="text-3xl ph ph-bell"></i>
+            <i class="text-3xl ph ph-user-circle"></i>
+          </div>
+        </nav>
+
+        <!-- breadcrumbs  -->
+        <div class="p-2 col-span-2">
+          <nav class="flex" aria-label="Breadcrumb">
+            <ol
+              class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse"
+            >
+              <li class="inline-flex items-center">
+                <a
+                  href="#"
+                  class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
+                >
+                  <svg
+                    class="w-3 h-3 me-2.5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"
+                    />
+                  </svg>
+                  Home
+                </a>
+              </li>
+              <li>
+                <div class="flex items-center">
+                  <svg
+                    class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 6 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 9 4-4-4-4"
+                    />
+                  </svg>
+                  <a
+                    href="#"
+                    class="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white"
+                    >Portal</a
+                  >
+                </div>
+              </li>
+              <li aria-current="page">
+                <div class="flex items-center">
+                  <svg
+                    class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 6 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 9 4-4-4-4"
+                    />
+                  </svg>
+                  <span
+                    class="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-black"
+                    >HR Dashboard</span
+                  >
+                </div>
+              </li>
+            </ol>
+          </nav>
+        </div>
+
+        <!-- welcome + 3 buttons  -->
+        <div class="p-2 col-span-2">
+          <div class="flex justify-between">
+            <h3 class="text-4xl font-medium">Welcome Back, James</h3>
+            <div class="flex gap-4">
+              <button
+                type="button"
+                class="flex justify-center gap-2 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-400 font-medium rounded-full text-sm px-5 py-2.5"
+              >
+                <i class="ph ph-calendar-blank text-xl"></i>
+                01-07 December
+              </button>
+
+              <button
+                type="button"
+                class="flex justify-center gap-2 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-400 font-medium rounded-full text-sm px-5 py-2.5"
+              >
+                <i class="text-xl ph ph-file-plus"></i>
+                Generate Report
+              </button>
+
+              <button
+                type="button"
+                class="flex justify-center gap-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+              >
+                <i class="text-xl ph ph-plus"></i>
+                Add Metric
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- employee overview  -->
+
+        <div class="p-3 col-span-1 border border-gray-200 rounded-[20px]">
+          <div class="flex justify-between items-center p-2">
+            <p class="text-xl font-medium text-black items-center">
+              Employee Overview
+            </p>
+            <button
+              type="button"
+              class="flex justify-center gap-2 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-400 font-medium rounded-full text-sm px-5 py-2.5"
+            >
+              <i class="ph ph-calendar-blank text-xl"></i>
+              October 2025
+            </button>
+          </div>
+          <div class="p-2">
+            <p>Total Employees</p>
+            <h3 class="text-medium text-3xl">256</h3>
+          </div>
+          <hr class="border border-gray-200 ml-4 mr-4 mt-2 mb-2" />
+          <!-- three -->
+          <div class="flex justify-between p-2">
+            <span class="">
+              <span class="flex items-center">
+                <p>Full Time</p>
+              </span>
+              <p>142</p>
+            </span>
+
+            <i class="ph ph-info"></i>
+            <!-- ----- -->
+            <span class="">
+              <span class="flex items-center">
+                <p>Part Time</p>
+              </span>
+              <p>64</p>
+            </span>
+
+            <i class="ph ph-info"></i>
+
+            <!-- ---- -->
+            <span class="">
+              <span class="flex items-center">
+                <p>Contract</p>
+              </span>
+              <p>50</p>
+            </span>
+            <i class="ph ph-info"></i>
+          </div>
+        </div>
+        <!-- work performance  -->
+
+        <div class="p-3 col-span-1 border border-gray-200 rounded-[20px]">
+          <div class="flex justify-between items-center p-2">
+            <p class="text-xl font-medium text-black items-center">
+              Work Performance
+            </p>
+            <button
+              type="button"
+              class="flex justify-center gap-2 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-400 font-medium rounded-full text-sm px-5 py-2.5"
+            >
+              Progress Overview
+              <i class="ph ph-arrow-right text-xl"></i>
+            </button>
+          </div>
+          <div class="p-2">
+            <h3 class="text-medium text-3xl">76%</h3>
+            <p>Improved Rate: +3.6%</p>
+          </div>
+          <h3 class="text-black p-2">
+            You're doing well! <br />
+            Overall employee efficiency is trending upward.
+          </h3>
+        </div>
+
+        <!-- employee overview -->
+        <div class="col-span-2 border border-gray-200 rounded-[20px]">
+          <!-- heading + 2 btns -->
+          <div class="p-2 flex justify-between items-center m-2 mb-0 pb-0">
+            <p class="text-xl font-medium text-black items-center">
+              Employee Overview
+            </p>
+            <div class="flex justify-between gap-4">
+              <button
+                type="button"
+                class="flex justify-center gap-2 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-400 font-medium rounded-full text-sm px-5 py-2.5"
+              >
+                <i class="ph ph-calendar-blank text-xl"></i>
+                October 2025
+              </button>
+
+              <button
+                type="button"
+                class="flex justify-center gap-2 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-400 font-medium rounded-full text-sm px-2.5 py-2.5"
+              >
+                <i class="ph ph-arrows-out-simple text-xl"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-4">
+            <!-- total applicants  -->
+            <div class="m-4 p-2">
+              <p class="text-sm">Total Applicants</p>
+              <p class="font-medium text-3xl">1240</p>
+              <div class="flex items-center justify-between">
+                <p class="text-sm">No resume submitted</p>
+                <p class="text-green-800 font-medium">41.2%</p>
+              </div>
+              <img class="pt-2" src="./assets/Graph 1.png" alt="" />
+            </div>
+            <!-- screened candidates  -->
+            <div class="m-4 p-2">
+              <p class="text-sm">Screened Candidates</p>
+              <p class="font-medium text-3xl">8320</p>
+              <div class="flex items-center justify-between">
+                <p class="text-sm">Not Shortlisted</p>
+                <p class="text-green-800 font-medium">27.6%</p>
+              </div>
+              <img class="pt-2" src="./assets/Graph 2.png" alt="" />
+            </div>
+            <!-- interviewd  -->
+            <div class="m-4 p-2">
+              <p class="text-sm">Interviewed</p>
+              <p class="font-medium text-3xl">4980</p>
+              <div class="flex items-center justify-between">
+                <p class="text-sm">Interview Cancelled</p>
+                <p class="text-pink-800 font-medium">18.9%</p>
+              </div>
+              <img class="pt-2" src="./assets/Graph 3.png" alt="" />
+            </div>
+            <!-- hired -->
+            <div class="m-4 p-2">
+              <p class="text-sm">Hired</p>
+              <p class="font-medium text-3xl">1560</p>
+              <div class="flex items-center justify-between">
+                <p class="text-sm">Offer Rejected</p>
+                <p class="text-green-800 font-medium">12.3%</p>
+              </div>
+              <img class="pt-2" src="./assets/Graph 4.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- daily task -->
+        <!-- <div class="bg-green-400 p-2 col-span-2">daily tasks</div> -->
+
+        <div class="col-span-2 border border-gray-200 rounded-[20px]">
+          <!-- heading + 2 btns -->
+          <div class="p-2 flex justify-between items-center m-2 mb-0 pb-0">
+            <p class="text-xl font-medium text-black items-center">
+              Daily Tasks
+            </p>
+            <div class="flex justify-between gap-4">
+              <!-- <button
+                type="button"
+                class="flex justify-center gap-2 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-400 font-medium rounded-full text-sm px-5 py-2.5"
+              >
+                <i class="ph ph-calendar-blank text-xl"></i>
+                Status : All Status 
+              </button> -->
+
+              <button
+                id="dropdownDefaultButton"
+                data-dropdown-toggle="dropdown"
+                class="hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium text-sm px-5 py-2.5 text-center inline-flex items-center bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-400 font-medium rounded-full text-sm px-5 py-2.5 items-center"
+                type="button"
+              >
+                Status: All Status
+                <svg
+                  class="w-2.5 h-2.5 ms-3 flex items-center"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+
+              <!-- Dropdown menu -->
+              <div
+                id="dropdown"
+                class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700"
+              >
+                <ul
+                  class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                  aria-labelledby="dropdownDefaultButton"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Dashboard</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Settings</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Earnings</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Sign out</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- arrows up and bottom -->
+
+              <button
+                type="button"
+                class="flex justify-center gap-2 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-400 font-medium rounded-full text-sm px-2.5 py-2.5 px-6"
+              >
+                <!-- <i class="ph ph-arrows-out-simple text-xl"></i> -->
+                <i class="ph ph-funnel-simple text-xl"></i>
+                Filters
+              </button>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-4">
+            <!-- total applicants  -->
+            <div class="m-4 p-2">
+              <p class="text-sm">Review New Employee's Contract</p>
+              <p class="font-medium text-3xl">1240</p>
+              <div class="flex items-center justify-between">
+                <p class="text-sm">No resume submitted</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- right side -->
+      <div class="p-3 col-span-1 border border-gray-200 mb-4">
+        <!-- search bar input  -->
+        <form class="max-w-md mx-auto">
+          <label
+            for="default-search"
+            class="mb-2 text-sm font-medium text-gray-900 sr-only"
+            >Search</label
+          >
+          <div class="relative">
+            <div
+              class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-gray-500 dark:text-gray-400 ml-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                />
+              </svg>
+            </div>
+            <input
+              type="search"
+              id="default-search"
+              class="block w-full p-4 ps-10 text-sm border border-gray-300 rounded-full focus:ring-gray-400 focus:border-gray-400"
+              placeholder="Search..."
+              required
+            />
+            <button
+              type="submit"
+              class="text-white absolute end-2.5 bottom-2.5 bg-black hover:bg-black focus:ring-4 focus:outline-none focus:ring-black font-medium text-sm px-4 py-2 rounded-full"
+            >
+              Search
+            </button>
+          </div>
+        </form>
+
+        <!-- upcoming meetings  -->
+        <div class="p-2 mt-2 flex justify-between">
+          <span class="text-gray-400"
+            >Upcoming Meetings
+
+            <h3 class="text-black">3 Sessions</h3>
+          </span>
+          <div class="arrow-btns flex items-center">
+            <i class="ph ph-arrow-circle-left text-5xl"></i>
+            <i class="ph ph-arrow-circle-right text-5xl"></i>
+          </div>
+        </div>
+
+        <!-- date -->
+
+        <span class="text-gray-400 p-2 flex items-center">
+          <i class="ph ph-calendar text-xl mr-1"></i>Monday 3, 2025
+        </span>
+        <!-- meetings with ppl  -->
+        <div class="grid grid-cols-7 items-center">
+          <i class="ph ph-user-circle text-[60px]"></i>
+          <div class="col-span-5 ml-4">
+            <p class="font-medium text-lg pb-0">Laila</p>
+            <p class="font-light">Front End Engineer</p>
+          </div>
+          <i class="ph ph-atom text-5xl"></i>
+        </div>
+
+        <div class="grid grid-cols-7 items-center">
+          <i class="ph ph-user-circle text-[60px]"></i>
+          <div class="col-span-5 ml-4">
+            <p class="font-medium text-lg pb-0">Karlo</p>
+            <p class="font-light">Designer</p>
+          </div>
+          <i class="ph ph-atom text-5xl"></i>
+        </div>
+
+        <!-- date -->
+
+        <span class="text-gray-400 p-2 flex items-center">
+          <i class="ph ph-calendar text-xl mr-1"></i>Tuesday 4, 2025
+        </span>
+        <!-- meetings with ppl  -->
+        <div class="grid grid-cols-7 items-center">
+          <i class="ph ph-user-circle text-[60px]"></i>
+          <div class="col-span-5 ml-4">
+            <p class="font-medium text-lg pb-0">Daniel Kim</p>
+            <p class="font-light">Data Engineer</p>
+          </div>
+          <i class="ph ph-atom text-5xl"></i>
+        </div>
+
+        <!-- open positions  -->
+        <div class="p-2 mt-2 flex justify-between">
+          <span class="text-gray-400"
+            >Open Positions
+
+            <h3 class="text-black">3 Jobs</h3>
+          </span>
+          <div class="arrow-btns flex items-center">
+            <i class="ph ph-arrow-circle-left text-5xl"></i>
+            <i class="ph ph-arrow-circle-right text-5xl"></i>
+          </div>
+        </div>
+
+        <!-- positions -->
+        <!-- position-1 -->
+        <div class="position-job p-2 flex items-center justify-between">
+          <span>
+            <p class="text-lg font-medium">UI/UX Researcher</p>
+            <p class="text-sm font-light">Remote</p>
+          </span>
+
+          <button
+            type="button"
+            class="bg-gray-200 hover:bg-gray-300 hover:text-white focus:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-sm px-5 py-1.5"
+          >
+            <i class="ph ph-users"></i>
+            <span class="text-black">15</span>
+            <span class="text-gray-500">Applicants</span>
+          </button>
+        </div>
+
+        <!-- position-2 -->
+        <div class="position-job p-2 flex items-center justify-between">
+          <span>
+            <p class="text-lg font-medium">Backend Engineer</p>
+            <p class="text-sm font-light">Hybrid</p>
+          </span>
+
+          <button
+            type="button"
+            class="bg-gray-200 hover:bg-gray-300 hover:text-white focus:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-sm px-5 py-1.5"
+          >
+            <i class="ph ph-users"></i>
+            <span class="text-black">6</span>
+            <span class="text-gray-500">Applicants</span>
+          </button>
+        </div>
+
+        <!-- position-3 -->
+        <div class="position-job p-2 flex items-center justify-between">
+          <span>
+            <p class="text-lg font-medium">Full Stack Developer</p>
+            <p class="text-sm font-light">Remote</p>
+          </span>
+
+          <button
+            type="button"
+            class="bg-gray-200 hover:bg-gray-300 hover:text-white focus:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-sm px-5 py-1.5"
+          >
+            <i class="ph ph-users"></i>
+            <span class="text-black">15</span>
+            <span class="text-gray-500">Applicants</span>
+          </button>
+        </div>
+        <!-- time tracker -->
+        <div
+          class="bg-purple-100 mt-4 p-2 m-2 rounded-xl border border-purple-300"
+        >
+          <p class="font-medium p-2">Time Tracker</p>
+          <div
+            class="bg-white rounded-lg py-2.5 mx-1 flex items-center justify-center text-3xl font-regular"
+          >
+            02:14
+          </div>
+
+          <span
+            class="flex justify-center text-sm text-gray-600 font-medium p-2"
+            >Start At 07:38</span
+          >
+        </div>
+      </div>
+    </parent-container>
+
+    <!-- flowbite cdn  -->
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+    <!-- motion script  -->
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
