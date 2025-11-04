@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One Animation</title>
+    <!-- tailwind css -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      svg {
+        width: 100vw;
+        height: 100vh;
+        border: 1px solid #333;
+      }
+
+      line {
+        stroke: red;
+        stroke-width: 3;
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <parent class="flex h-screen w-screen m-auto parent">
+      <div
+        class="box m-4 bg-pink-400 h-[100px] w-[100px] rounded-xl justify-center items-center text-center font-black text-xl text-white flex"
+      >
+        Box
+      </div>
+      <div
+        class="box1 m-4 bg-pink-400 h-[100px] w-[100px] rounded-xl justify-center items-center text-center font-black text-xl text-white flex"
+      >
+        Box
+      </div>
+      <!-- <svg> 
+        <line x1="10" y1="10" x2="290" y2="290" />
+      </svg> -->
+      <h1 id="number" class="text-5xl m-12 font-black text-pink-800">0</h1>
+    </parent>
+
+    <!-- script  -->
+    <script type="module">
+      import { animate } from "https://cdn.jsdelivr.net/npm/motion@12.23.24/+esm";
+      // basic animatoin
+      //   animate(
+      //     ".box",
+      //     { rotate: 90 },
+      //     { type: "spring", repeat: Infinity, repeatDelay: 0.2 }
+      //   );
+
+      //   animatiing line
+      //   animate("line", { pathLength: [0, 1] }, { duration: 1 });
+
+      // numbers
+      const n = document.getElementById("number");
+      animate(0, 100, {
+        duration: 2,
+        ease: "circOut",
+        onUpdate: (n) => {
+          number.innerHTML = Math.round(n);
+        },
+      });
+
+      // Colors
+      animate("#fff", "#dab381", {
+        duration: 2,
+        onUpdate: (latest) => {
+          n.style.color = latest;
+          console.log(latest);
+        },
+      });
+
+      //   const count = document.getElementById("count");
+
+      //   animate(0, 100, {
+      //     duration: 2,
+      //     ease: "circOut",
+      //     onUpdate: (latest) => (count.innerHTML = Math.round(latest)),
+      //   });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-black">
+    <ul>
+      <li
+        id="1"
+        class="box h-[100px] w-[100px] p-3 bg-pink-200 border border-pink-500 m-2"
+      >
+        1
+      </li>
+      <li
+        id="2"
+        class="box h-[100px] w-[100px] p-3 bg-pink-200 border border-pink-500 m-2"
+      >
+        2
+      </li>
+      <li
+        id="3"
+        class="box h-[100px] w-[100px] p-3 bg-pink-200 border border-pink-500 m-2"
+      >
+        3
+      </li>
+      <li
+        id="4"
+        class="box h-[100px] w-[100px] p-3 bg-pink-200 border border-pink-500 m-2"
+      >
+        4
+      </li>
+    </ul>
+
+    <!-- motion script  -->
+    <script type="module">
+      import {
+        animate,
+        scroll,
+      } from "https://cdn.jsdelivr.net/npm/motion@latest/+esm";
+
+      const one = document.getElementById("1");
+      const two = document.getElementById("2");
+      const three = document.getElementById("3");
+      const four = document.getElementById("4");
+    </script>
+  </body>
+</html>
