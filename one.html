@@ -8,8 +8,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
       svg {
-        width: 100vw;
-        height: 100vh;
+        width: 150px;
+        height: 150px;
         border: 1px solid #333;
       }
 
@@ -31,24 +31,48 @@
       >
         Box
       </div>
-      <!-- <svg> 
-        <line x1="10" y1="10" x2="290" y2="290" />
-      </svg> -->
-      <h1 id="number" class="text-5xl m-12 font-black text-pink-800">0</h1>
+      <svg>
+        <line x1="10" y1="10" x2="100" y2="100" />
+      </svg>
+      <h1 id="number" class="text-5xl m-12 font-black text-pink-800 w-[100px]">
+        0
+      </h1>
+      <!-- sequence -->
+      <div class="squares flex">
+        <div
+          class="square m-2 bg-pink-400 h-[100px] w-[100px] rounded-xl justify-center items-center text-center font-black text-xl text-white flex"
+          id="one"
+        ></div>
+        <div
+          class="square m-2 bg-pink-400 h-[100px] w-[100px] rounded-xl justify-center items-center text-center font-black text-xl text-white flex"
+          id="two"
+        ></div>
+        <div
+          class="square m-2 bg-pink-400 h-[100px] w-[100px] rounded-xl justify-center items-center text-center font-black text-xl text-white flex"
+          id="three"
+        ></div>
+        <div
+          class="square m-2 bg-pink-400 h-[100px] w-[100px] rounded-xl justify-center items-center text-center font-black text-xl text-white flex"
+          id="four"
+        ></div>
+      </div>
     </parent>
 
     <!-- script  -->
     <script type="module">
-      import { animate } from "https://cdn.jsdelivr.net/npm/motion@12.23.24/+esm";
+      import {
+        animate,
+        stagger,
+      } from "https://cdn.jsdelivr.net/npm/motion@12.23.24/+esm";
       // basic animatoin
-      //   animate(
-      //     ".box",
-      //     { rotate: 90 },
-      //     { type: "spring", repeat: Infinity, repeatDelay: 0.2 }
-      //   );
+      animate(
+        ".box",
+        { rotate: 90 },
+        { type: "spring", repeat: Infinity, repeatDelay: 0.2 }
+      );
 
       //   animatiing line
-      //   animate("line", { pathLength: [0, 1] }, { duration: 1 });
+      animate("line", { pathLength: [0, 1] }, { duration: 1 });
 
       // numbers
       const n = document.getElementById("number");
@@ -61,7 +85,7 @@
       });
 
       // Colors
-      animate("#fff", "#dab381", {
+      animate("#fff", "#000", {
         duration: 2,
         onUpdate: (latest) => {
           n.style.color = latest;
@@ -76,6 +100,18 @@
       //     ease: "circOut",
       //     onUpdate: (latest) => (count.innerHTML = Math.round(latest)),
       //   });
+      var one = document.getElementById("one");
+      var two = document.getElementById("two");
+      var three = document.getElementById("three");
+      var four = document.getElementById("four");
+      var sequence = [
+        [".square", { y: 100 }, { delay: stagger(0.2), duration: 1 }],
+        [one, { scale: [1, 1.5, 1] }, { easing: "ease", duration: 0.4 }],
+        [two, { scale: [1, 1.5, 1] }, { easing: "ease", duration: 0.4 }],
+        [three, { scale: [1, 1.5, 1] }, { easing: "ease", duration: 0.4 }],
+        [four, { scale: [1, 1.5, 1] }, { easing: "ease", duration: 0.4 }],
+      ];
+      animate(sequence);
     </script>
   </body>
 </html>
