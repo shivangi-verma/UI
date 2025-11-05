@@ -106,12 +106,36 @@
       var four = document.getElementById("four");
       var sequence = [
         [".square", { y: 100 }, { delay: stagger(0.2), duration: 1 }],
+        //
         [one, { scale: [1, 1.5, 1] }, { easing: "ease", duration: 0.4 }],
         [two, { scale: [1, 1.5, 1] }, { easing: "ease", duration: 0.4 }],
         [three, { scale: [1, 1.5, 1] }, { easing: "ease", duration: 0.4 }],
         [four, { scale: [1, 1.5, 1] }, { easing: "ease", duration: 0.4 }],
+        //
+        [one, { scale: [1, 0.5] }, { easing: "ease", duration: 0.5 }],
+        [two, { scale: [1, 0.5] }, { easing: "ease", duration: 0.5 }],
+        [three, { scale: [1, 0.5] }, { easing: "ease", duration: 0.5 }],
+        [four, { scale: [1, 0.5] }, { easing: "ease", duration: 0.5 }],
+        //
+        [one, { x: [50] }, { easing: "ease", duration: 0.5 }],
+        [two, { x: [50] }, { easing: "ease", duration: 0.5 }],
+        [three, { x: [50] }, { easing: "ease", duration: 0.5 }],
+        [four, { x: [50] }, { easing: "ease", duration: 0.5 }],
       ];
-      animate(sequence);
+
+      const animation = animate(sequence);
+
+      // Double current speed
+      console.log(animation.animationend + "finished");
+
+      if (animation.animationend) {
+        animation.speed = -1;
+        animate(sequence);
+      }
+
+      var date = new Date();
+      console.log(date);
+      console.log(date.getMinutes);
     </script>
   </body>
 </html>
